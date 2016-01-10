@@ -22,11 +22,12 @@
  ++ LCD_Enable        3
  ++ DataBit4..7       4..7
  ++ SW_record_time    9
- ++ SW_stop_timekeep  0
+ !+ SW_stop_timekeep  0
  ++ SW_start          A0
  ++ SW_pause          A1
  ++ SW_reset_time     A2
  
+ Warning! can't use Serial functions.
  */
 
 #define hardwareSS 10  // don't touch it!
