@@ -5,7 +5,7 @@
  Chronograph with SD recording.
  Time Keeper v2.3
  based on SD Example.
- by 2014 Akio Fujimoto.
+ by 2014- Akio Fujimoto.
  I appriciate to Arduino team, and its library!
  
  
@@ -16,18 +16,22 @@
  ++ MOSI              11
  ++ MISO              12
  ++ SCLK              13
- ++ Hardware Reserved 10
+ ++ Hardware Reserved 10  /*Don't touch it!!*/
  ++ LCD_RS            2
  ++ LCD_RW            GND
  ++ LCD_Enable        3
- ++ DataBit4..7       4..7
+ ++ DataBit4..7       4..7  // Use the LCD module as "4-bit mode", for saving GPIO pins.
  ++ SW_record_time    9
- !+ SW_stop_timekeep  0
+ !+ SW_stop_timekeep  0 / UART RX
  ++ SW_start          A0
  ++ SW_pause          A1
  ++ SW_reset_time     A2
+ C stands for a connect.
+  M stands for a Modified.
+ just like a emacs view., as below.
+ CM Pin role          Pin No.
  
- Warning! can't use Serial functions.
+ // Warning! can't use Serial functions due to pin0 using as switch...
  */
 
 #define hardwareSS 10  // don't touch it!
